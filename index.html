@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="FIRM">
+  <meta name="keywords" content="Robotics, Quadruped, Whole-body Control, Whole-body Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    FIRM
+  </title>
+
+  <!-- <link rel="apple-touch-icon" sizes="57x57"s
+    href="./static/images/cr7_frame5_crop.png" />
+
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png"
+    sizes="196x196" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png"
+    sizes="192x192" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="16x16" />
+
+  <link rel="mask-icon" href="//www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="application-name" content="Stanford University" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="//www-media.stanford.edu/assets/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="//www-media.stanford.edu/assets/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="//www-media.stanford.edu/assets/favicon/mstile-150x150.png" />
+  <meta name="msapplication-square310x310logo" content="//www-media.stanford.edu/assets/favicon/mstile-310x310.png" /> -->
+
+  <link rel="icon" href="./static/images/icon.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ38WT2YPD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZ38WT2YPD');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- <script src="https://kit.fontawesome.com/19914a84eb.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <meta property="og:image" content="https://lecar-lab.github.io/FIRM-humanoid/static/images/hero_static.gif" />
+  <meta property="og:image:secure" content="https://lecar-lab.github.io/FIRM-humanoid/static/images/hero_static.gif" />
+</head>
+
+<section class="hero is-link is-fullheight video">
+  <div class="hero-video">
+    <video playsinline autoplay muted loop>
+      <source src="./static/videos/tea-ph.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+    style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+    <video playsinline autoplay muted loop>
+      <source src=" ./static/videos/hero_static.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head is-hidden-mobile">
+    <header class="navbar">
+      <div class="container is-size-5">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pl-4 pr-4" href="./static/FIRM.pdf">  <!-- TODO:update -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+            <a class="navbar-item  pl-4 pr-4" href="https://arxiv.org/abs/">  <!-- TODO:update -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv(Coming Soon)</span> </a>
+            <a href="" class="navbar-item  pl-4 pr-4"> <!-- TODO:update -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span> </a>
+            <span class="navbar-item  pl-4 pr-4">
+              <a href="" class="button is-inverted is-large">  <!-- TODO:update -->
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code (Coming Soon)</span>
+              </a>
+            </span>
+    
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 6rem;">
+        FIRM 🦾
+      </h1>
+      <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
+        Generalizable Humanoid Fall Mitigation and Recovery from Few Demonstrations
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
+        <!-- #TODO (Robotics: Science and Systems (RSS) 2025) -->
+      </h1>
+      <!--  <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        <b>Spotlight</b> WCBM Workshop CoRL 2024
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        X-Embodiment Workshop CoRL 2024
+      </h1> -->
+      <div class="column has-text-centered is-hidden-tablet">
+        <div class="publication-links">
+          <!-- PDF Link. -->
+          <span class="link-block">
+            <a href="./static/FIRM.pdf" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv (Coming Soon)</span>
+            </a>
+          </span>
+          <!-- Video Link. -->
+          <span class="link-block">
+            <a href="https://youtu.be/OfsvJ5-Fyzg" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
+          <!-- Code Link. -->
+          <span class="link-block">
+            <a href="https://github.com/LeCAR-Lab/FIRM/"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://spectrum.ieee.org/video-friday-darpa-triage-challenge" class="external-link button is-normal is-rounded is-dark" target="_blank">
+              <span class="icon">
+                <img src="./static/images/spectrum.png" alt="IEEE Spectrum" />
+              </span>
+              <span>IEEE Spectrum</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <!-- <div class="hero-foot is-hidden-mobile">
+    <nav class="tabs is-boxed is-fullwidth is-size-4">
+      <ul>
+        <li><a href="#agile-skills">Agile Whole-Body Skills</a></li>
+        <li><a href="#before-after-asap"></a>Before/After ASAP Fine-tuning</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#method">Method</a></li>
+      </ul>
+    </nav>
+  </div> -->
+</section>
+
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          Fall Damage Mitigation Task
+        </h2>
+        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with a <strong style="color: #e63946; font-weight: 800;">baseline</strong> that uses <em>RL for low-body locomotion and IK for upper-body manipulation w/o any force curriculum</em>, on the following three tasks: <b>Door-Opening</b>, <b>Cart-Pulling</b>, and <b>Heavy-Lifting</b>.
+        </p>        
+        <tr>
+          <td>
+            <div class="columns"> 
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Baseline)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (FIRM)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column" style="text-align: center;">
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Door-Opening (Baseline)</h3>
+                <video autoplay muted loop playsinline controls preload="auto"
+                      src="./static/videos/g1_door_opening_baseline_unmask.mp4"
+                      width="70%"
+                      style="border-radius:10px; border: 5px solid rgb(255, 114, 112);">
+                </video>
+              </div>
+              <div class="column" style="text-align: center;">
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Door-Opening (FIRM)</h3>
+                <video autoplay muted loop playsinline controls preload="auto"
+                      src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
+                      width="70%"
+                      style="border-radius:10px; border: 5px solid rgb(134, 236, 137);">
+                </video>
+              </div>
+            </div>
+            <br>
+
+            <div class="columns"> 
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting (Baseline)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting (FIRM)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
+              </div>
+            </div>
+
+
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          <em>Autonomous</em> Long-Horizon Forceful Loco-Manipulation Task
+        </h2>      
+        <tr>
+          <td>
+
+            <div class="columns"> <!-- Correct Bulma structure -->
+              <div class="column has-text-centered">
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/autonomy_unmask.mov" width="100%" style="border-radius:10px;"></video>
+              </div>
+
+            </div>
+            <br>
+
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          More Forceful Loco-Manipulation Tasks via <em>Teleoperation</em>
+        </h2>
+        <tr>
+          <td>
+
+            <!-- <div class="columns">
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Door-Opening</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/door_opening_fieldai_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div> -->
+
+            <div class="columns"> <!-- Correct Bulma structure -->
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Unitree G1)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/g1_cart_pulling_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Booster T1)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_praj_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+
+            <div class="columns"> <!-- Correct Bulma structure -->
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_mask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Adaptive Heavy-Lifting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/adaptive_heavy_lifting_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+
+            <div class="columns"> <!-- Correct Bulma structure -->
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Payloads-Transporting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/handover_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Stance-Pulling</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/stance_pulling_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+
+            <div class="columns"> <!-- Correct Bulma structure -->
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 1</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_1_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 2</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_2_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+        Humanoid robots are inevitably exposed to falls in complex environments, making <span class="method" style="color: darkred;">generalizable</span> real-time fall damage mitigation and recovery essential for safe and reliable deployment. Prior works often treat falling and recovery separately, and rely on heuristics, full-motion imitation, or pure reinforcement learning. The former two are inherently rigid and fail to generalize across diverse fall scenarios, while the latter depends on tedious reward design and is prone to producing unnatural poses and unsafe behaviors. In this paper, we present <span class="method" style="color: green;">FIRM</span>, a learning-based approach that mitigates fall damage and safe recovery within a single policy, without heavy reward engineering. FIRM includes two parts: <span class="method" style="color: darkred;">1) skill prior learning</span>, where sparse key-frames from human demonstrations are augmented with reinforcement learning to capture safe fall and recovery behaviors that are suitable for robots, without requiring full-trajectory imitation; and <span class="method" style="color: darkred;">2) Adaptive memory learning</span>, where the priors are first distilled into a diffusion model to preserve multi-modal distribution and form a smooth behavioral manifold, and then coupled with an adapter that dynamically adjusts reference trajectories to guide the diffusion. This enables diverse yet safe behaviors that generalize across fall scenarios and adapt in real time to terrain, dynamics, and robot states. We demonstrate effective sim-ti-real transfer and state-of-the-art performances across diverse both sim and real-world scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Method</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            <span class="method" style="color: darkred;">FIRM</span> TBD.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <h2 class="title is-4" style="text-align: center;">Training Framework</h2> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-thirds">
+        <div class="content has-text-justified">
+          <!-- <ol type="a">
+            There are two steps within the <span class="method" style="color: darkred;">FIRM</span> framework:
+              <ol>
+                <li><strong>Two-Agent Joint Training with Whole-Body Proprioception</strong>:  <br>Two agents, each assigned distinct sub-tasks, are jointly trained using shared whole-body proprioception signals. During training, randomized 3D external forces—bounded by the upper-body joint torque limits—are applied to the end-effectors to encourage robust coordination;</li>
+                <li><strong>External Disturbance Handling via Force Perturbation</strong><br> The agents learn to maintain task performance under force perturbations, developing complementary behaviors to counteract disturbances and achieve stable loco-manipulation.</li>
+              </ol> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth has-text-centered">
+        <img src="./static/images/FIRM-Pipeline.png" alt="" style="width: 90%;" />
+      </div>
+    </div>
+
+
+
+
+    <section class="section" id="BibTeX">
+      <div class="container content">
+        <h2 class="titile">BibTeX</h2>
+        <pre><code>@article{anonymous-icra2026-firm,
+<!--           title={FIRM: Learning Force-Adaptive Humanoid Loco-Manipulation},
+          author={Zhang, Yuanhang and Yuan, Yifu and Gurunath, Prajwal and He, Tairan and Omidshafiei, Shayegan and Agha-mohammadi, Ali-akbar and Vazquez-Chanlatte, Marcell and Pedersen, Liam and Shi, Guanya},
+          journal={arXiv preprint arXiv:2505.06776},
+          year={2025} -->
+        }</code></pre>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://umi-on-legs.github.io"><span class="dnerf">UMI-On-Legs</span></a>.</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
