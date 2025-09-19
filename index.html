@@ -119,7 +119,7 @@
         FIRM 🦾
       </h1>
       <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
-        Generalizable Humanoid Fall Mitigation and Recovery from Few Demonstrations
+        Unified Humanoid Fall-Safety Policy
       </h1>
       <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
         <!-- #TODO (Robotics: Science and Systems (RSS) 2025) -->
@@ -369,7 +369,16 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-        Humanoid robots are inevitably exposed to falls in complex environments, making <span class="method" style="color: darkred;">generalizable</span> real-time fall damage mitigation and recovery essential for safe and reliable deployment. Prior works often treat falling and recovery separately, and rely on heuristics, full-motion imitation, or pure reinforcement learning. The former two are inherently rigid and fail to generalize across diverse fall scenarios, while the latter depends on tedious reward design and is prone to producing unnatural poses and unsafe behaviors. In this paper, we present <span class="method" style="color: green;">FIRM</span>, a learning-based approach that mitigates fall damage and safe recovery within a single policy, without heavy reward engineering. FIRM includes two parts: <span class="method" style="color: darkred;">1) skill prior learning</span>, where sparse key-frames from human demonstrations are augmented with reinforcement learning to capture safe fall and recovery behaviors that are suitable for robots, without requiring full-trajectory imitation; and <span class="method" style="color: darkred;">2) Adaptive memory learning</span>, where the priors are first distilled into a diffusion model to preserve multi-modal distribution and form a smooth behavioral manifold, and then coupled with an adapter that dynamically adjusts reference trajectories to guide the diffusion. This enables diverse yet safe behaviors that generalize across fall scenarios and adapt in real time to terrain, dynamics, and robot states. We demonstrate effective sim-ti-real transfer and state-of-the-art performances across diverse both sim and real-world scenarios.
+
+        Falling is an inherent risk of humanoid mobility. Maintaining stability is thus a primary safety focus in robot control and learning, yet no existing approach fully averts loss of balance.When instability does occur, prior work addresses only isolated aspects of falling: avoiding falls, choreographing a controlled descent, or standing up afterward.  Consequently, humanoid robots lack integrated strategies for impact mitigation and prompt recovery when real falls defy these scripts.
+        <p>
+
+        <span class="method" style="color: darkred;">We aim to go beyond keeping balance to make the entire fall-and-recovery process safe and autonomous</span> : prevent falls when possible, reduce impact when unavoidable, and stand up when fallen. By fusing sparse human demonstrations with reinforcement learning and an adaptive diffusion-based memory of safe reactions, we learn whole-body behaviors that unify fall prevention, impact mitigation, and rapid recovery in one policy.
+
+        <p>
+          
+        Experiments in simulation and on a Unitree G1 demonstrate robust sim-to-real transfer, lower impact forces, and consistently fast recovery across diverse disturbances, pointing toward safer, more resilient humanoids in real environments.
+
           </p>
         </div>
       </div>
