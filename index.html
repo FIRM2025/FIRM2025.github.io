@@ -206,24 +206,24 @@
           Fall Damage Mitigation Task
         </h2>
         <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with a <strong style="color: #e63946; font-weight: 800;">baseline</strong> that uses <em>RL for low-body locomotion and IK for upper-body manipulation w/o any force curriculum</em>, on the following three tasks: <b>Door-Opening</b>, <b>Cart-Pulling</b>, and <b>Heavy-Lifting</b>.
+          We evaluate real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> on different terrian environments.
         </p>        
         <tr>
           <td>
             <div class="columns"> 
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Baseline)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Flat Mat</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
               </div>
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (FIRM)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Uneven Mat</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
               </div>
             </div>
 
             <div class="columns">
               <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Door-Opening (Baseline)</h3>
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Plastic Terrain</h3>
                 <video autoplay muted loop playsinline controls preload="auto"
                       src="./static/videos/g1_door_opening_baseline_unmask.mp4"
                       width="70%"
@@ -231,7 +231,7 @@
                 </video>
               </div>
               <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Door-Opening (FIRM)</h3>
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Slippery Terrain</h3>
                 <video autoplay muted loop playsinline controls preload="auto"
                       src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
                       width="70%"
@@ -243,15 +243,19 @@
 
             <div class="columns"> 
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting (Baseline)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Foam</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
               </div>
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting (FIRM)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Stacked Planks</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
               </div>
             </div>
 
+
+        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;">baselines</strong> that uses <em>passive control when fall happens (i.e., Freezing Mode) and pure tracking (i.e., sparse key-frame tracking)</em>, on the simulator.
+        </p>  
 
           </td>
         </tr>
@@ -265,7 +269,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
-          <em>Autonomous</em> Long-Horizon Forceful Loco-Manipulation Task
+          <em>Autonomous</em> Fall Damage Mitigation and Recovery Tasks
         </h2>      
         <tr>
           <td>
@@ -290,7 +294,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
-          More Forceful Loco-Manipulation Tasks via <em>Teleoperation</em>
+          Autonomous Fall Prevention
         </h2>
         <tr>
           <td>
@@ -304,11 +308,11 @@
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Unitree G1)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Outage (0.5s Zero-Torque)</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/g1_cart_pulling_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Booster T1)</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Push to the Wall</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_praj_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
             </div>
@@ -317,11 +321,11 @@
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column has-text-centered">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Push to the Slope</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_mask_h264.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
               <div class="column has-text-centered">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Adaptive Heavy-Lifting</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Hitting with Ball</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/adaptive_heavy_lifting_unmask.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
             </div>
@@ -330,28 +334,151 @@
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Payloads-Transporting</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Hitting with Box</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/handover_unmask.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Stance-Pulling</h3>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy Payload</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/stance_pulling_h264.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
             </div>
             <br>
 
 
-            <div class="columns"> <!-- Correct Bulma structure -->
-              <div class="column has-text-centered">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 1</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_1_h264.mp4" width="100%" style="border-radius:10px;"></video>
+<!-- <!-- <!--             <div class="columns"> <!-- Correct Bulma structure -->
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          Fall Recovery Task
+        </h2>
+        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We evaluate real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> on different terrian environments.
+        </p>        
+        <tr>
+          <td>
+            <div class="columns"> 
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sandy Terrain</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
               </div>
-              <div class="column has-text-centered">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 2</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_2_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Soil Terrain</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column" style="text-align: center;">
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Grass Terrain</h3>
+                <video autoplay muted loop playsinline controls preload="auto"
+                      src="./static/videos/g1_door_opening_baseline_unmask.mp4"
+                      width="70%"
+                      style="border-radius:10px; border: 5px solid rgb(255, 114, 112);">
+                </video>
+              </div>
+              <div class="column" style="text-align: center;">
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Wave Grass Terrain</h3>
+                <video autoplay muted loop playsinline controls preload="auto"
+                      src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
+                      width="70%"
+                      style="border-radius:10px; border: 5px solid rgb(134, 236, 137);">
+                </video>
               </div>
             </div>
             <br>
+
+
+
+        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;"> baselines</strong> that uses <em>given trajectory (i.e., Unitree G1 Controller) and pure RL (i.e., HosT)</em> on indoor environments.
+        </p>  
+            <!-- Row 1 -->
+          <div class="columns is-vcentered">
+            <!-- Video 1 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                Unitree G1 Controller
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_door_opening_baseline_unmask.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(255, 114, 112);">
+              </video>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                HoST
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(134, 236, 137);">
+              </video>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                FIRM (Ours)
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_door_opening_rocky_unmask.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
+              </video>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="columns is-vcentered">
+            <!-- Video 4 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                Unitree G1 Controller
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_other_task_baseline.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(255, 114, 112);">
+              </video>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                HoST
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_other_task_host.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(134, 236, 137);">
+              </video>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                FIRM (Ours)
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/g1_other_task_firm.mp4"
+                     style="width: 70%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
+              </video>
+            </div>
+          </div>
+
+
+
+
+
 
           </td>
         </tr>
@@ -376,7 +503,7 @@
         <span class="method" style="color: darkred;">We aim to go beyond keeping balance to make the entire fall-and-recovery process safe and autonomous</span> : prevent falls when possible, reduce impact when unavoidable, and stand up when fallen. By fusing sparse human demonstrations with reinforcement learning and an adaptive diffusion-based memory of safe reactions, we learn whole-body behaviors that unify fall prevention, impact mitigation, and rapid recovery in one policy.
 
         <p>
-          
+
         Experiments in simulation and on a Unitree G1 demonstrate robust sim-to-real transfer, lower impact forces, and consistently fast recovery across diverse disturbances, pointing toward safer, more resilient humanoids in real environments.
 
           </p>
@@ -394,7 +521,11 @@
       <div class="column is-two-thirds">
         <div class="content has-text-justified">
           <p>
-            <span class="method" style="color: darkred;">FIRM</span> TBD.
+             We present <span class="method" style="color: green;">FIRM</span>, (short for <span class="method" style="color: darkred;">F</span>all m<span class="method" style="color: darkred;">i</span>tigation and <span class="method" style="color: darkred;">r</span>ecovery from a few human de<span class="method" style="color: darkred;">m</span>onstrations), a control policy for the diverse, complex dynamics of humanoid falling and recovery.  FIRM unifies fall mitigation and recovery in a single framework that balances <span class="method" style="color: darkred;">safety</span> and <span class="method" style="color: darkred;">behavioral diversity</span>.  It operates in two stages:
+             </p>
+            1) Skill priors: a few human demonstrations are fitted and retargeted to the G1 humanoid, then sparsified into key frames.  These seed skills are expanded with RL-based augmentation and post-stitching to produce diverse, damage-reducing trajectories.  
+            </p>
+            2) Adaptive memory: the enriched trajectories are distilled into a diffusion model and paired with a lightweight adapter that enables real-time fall mitigation and recovery across varied conditions.
           </p>
         </div>
       </div>
@@ -415,11 +546,51 @@
     
     <div class="columns is-centered">
       <div class="column is-four-fifth has-text-centered">
-        <img src="./static/images/FIRM-Pipeline.png" alt="" style="width: 90%;" />
+        <img src="./static/images/firm-overview.png" alt="" style="width: 67%;" />
       </div>
+
     </div>
 
 
+
+
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Adaptive safe control - lightweight online adapter</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            During inference, the adapter uses
+            the history of observations to dynamically predict a feature and match with
+            a key-frame goal feature in the code-book, and then pass the matched goal
+            feature into the diffusion model to guide the process with context-awareness.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <h2 class="title is-4" style="text-align: center;">Training Framework</h2> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-thirds">
+        <div class="content has-text-justified">
+          <!-- <ol type="a">
+            There are two steps within the <span class="method" style="color: darkred;">FIRM</span> framework:
+              <ol>
+                <li><strong>Two-Agent Joint Training with Whole-Body Proprioception</strong>:  <br>Two agents, each assigned distinct sub-tasks, are jointly trained using shared whole-body proprioception signals. During training, randomized 3D external forces—bounded by the upper-body joint torque limits—are applied to the end-effectors to encourage robust coordination;</li>
+                <li><strong>External Disturbance Handling via Force Perturbation</strong><br> The agents learn to maintain task performance under force perturbations, developing complementary behaviors to counteract disturbances and achieve stable loco-manipulation.</li>
+              </ol> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth has-text-centered">
+        <img src="./static/images/adapt.png" alt="" style="width: 50%;" />
+      </div>
+      
+    </div>
 
 
     <section class="section" id="BibTeX">
