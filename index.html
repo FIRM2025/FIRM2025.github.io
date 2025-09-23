@@ -198,78 +198,7 @@
 
 
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
-          Fall Damage Mitigation Task
-        </h2>
-        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          We evaluate real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> on different terrian environments.
-        </p>        
-        <tr>
-          <td>
-            <div class="columns"> 
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Flat Mat</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
-              </div>
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Uneven Mat</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
-              </div>
-            </div>
 
-            <div class="columns">
-              <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Plastic Terrain</h3>
-                <video autoplay muted loop playsinline controls preload="auto"
-                      src="./static/videos/g1_door_opening_baseline_unmask.mp4"
-                      width="100%"
-                      style="border-radius:10px; border: 5px solid rgb(255, 114, 112);">
-                </video>
-              </div>
-              <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Slippery Terrain</h3>
-                <video autoplay muted loop playsinline controls preload="auto"
-                      src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
-                      width="100%"
-                      style="border-radius:10px; border: 5px solid rgb(134, 236, 137);">
-                </video>
-              </div>
-            </div>
-            <br>
-
-            <div class="columns"> 
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Foam</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
-              </div>
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Stacked Planks</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
-              </div>
-            </div>
-
-
-        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          We compare the performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;">baselines</strong> that uses <em>passive control when fall happens (i.e., Freezing Mode) and pure tracking (i.e., sparse key-frame tracking)</em>, on the simulator.
-        </p> 
-             <div class="columns"> 
-              <div class="column">
-              <!--   <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"></h3> -->
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/xxx.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
-              </div> 
-                 </div>
-            </div>
-
-          </td>
-        </tr>
-      </div> 
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="container">
@@ -279,14 +208,58 @@
           <em>Autonomous</em> Fall Damage Mitigation and Recovery Tasks
         </h2>      
    <!--      <tr>
-          <td> -->
+          <td> --><p class="content is-medium" style="text-align: center; padding-bottom: 20px;">1)We evaluate <strong style="color: #13c253; font-weight: 800;">FIRM</strong> under different types of terrains: <strong style="color: darkgreen; font-weight: 800;">Grass, Red-Soil Slope, Form, and Irregular debris</strong>. <strong style="color: #13c253; font-weight: 800;">FIRM</strong>  is also robust under perturbation with deformable payload. </p>
+          
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column has-text-centered">
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/auto-task12.mp4" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/12-outdoor-uneven.mov" width="100%" style="border-radius:10px;"></video>
               </div>
 
             </div>
+
+            <div class="columns is-centered"> <!-- Bulma columns container -->
+                <div class="column has-text-centered">
+                  <video autoplay muted loop playsinline controls preload="auto" 
+                         src="./static/videos/12-indoor-uneven.mov" 
+                         width="100%" style="border-radius:10px;">
+                  </video>
+                </div>
+
+                <div class="column has-text-centered">
+                  <video autoplay muted loop playsinline controls preload="auto" 
+                         src="./static/videos/12-indoor-payload.mov" 
+                         width="100%" style="border-radius:10px;">
+                  </video>
+                </div>
+              </div>
+                <p> 
+              <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">2) We compare the performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with <strong style="color: #e63946; font-weight: 800;"> FIRM wo Online Adapter</strong> to better evaluate context-awareness.
+        </p>  
+          <!-- Row 1 -->
+          <div class="columns is-vcentered">
+            <!-- Left: FIRM w/o Online Adapter -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                FIRM w/o Online Adapter
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/no-adapt.mov"
+                     style="width: 80%; border-radius:10px; border: 5px solid rgb(255, 180, 112);">
+              </video>
+            </div>
+
+            <!-- Right: FIRM (Ours) -->
+            <div class="column has-text-centered">
+              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+                FIRM (Ours)
+              </h3>
+              <video autoplay muted loop playsinline controls preload="auto"
+                     src="./static/videos/adapt.mov"
+                     style="width: 80%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
+              </video>
+            </div>
+          </div>
         <!--     <br> -->
 
    <!--        </td>
@@ -315,12 +288,12 @@
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Outage (0.5s Zero-Torque)</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/g1_cart_pulling_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Outage (0.2s Zero-Torque)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-prev-1.mov" width="100%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
-                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Hitting with Ball</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/adaptive_heavy_lifting_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Adding Deformable Payload & Hitting with Ball</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-pb.mov" width="100%" style="border-radius:10px;"></video>
               </div>
             </div>
             <br>
@@ -331,12 +304,12 @@
 
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Hitting with Box</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/handover_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Pushing towards the Slope</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/slope.mov" width="100%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Deformable Payload</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/stance_pulling_h264.mp4" width="100%" style="border-radius:10px;"></video>
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Pushing towards the Wall</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/wall.mov" width="100%" style="border-radius:10px;"></video>
               </div>
             </div>
             <br>
@@ -349,6 +322,33 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          Fall Damage Mitigation Task
+        </h2>
+       
+
+
+        <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We compare the quantitative performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;">baselines</strong> that uses <em>passive control when fall happens (i.e., Freezing Mode) and pure tracking (i.e., sparse key-frame tracking)</em>, on the simulator.
+        </p> 
+              <div class="column">
+              <!--   <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"></h3> -->
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/sim-mitigation.mov" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
+              </div> 
+              
+            </div>
+
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
@@ -363,30 +363,20 @@
         </p>        
         <tr>
           <td>
-            <div class="columns"> 
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sandy Terrain</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_baseline_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
-              </div>
-              <div class="column">
-                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Soil Terrain</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_FIRM_mask_h264.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
-              </div>
-            </div>
-
+      
             <div class="columns">
               <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Grass Terrain</h3>
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Flat Mat</h3>
                 <video autoplay muted loop playsinline controls preload="auto"
-                      src="./static/videos/g1_door_opening_baseline_unmask.mp4"
+                      src="./static/videos/flat.mov"
                       width="70%"
                       style="border-radius:10px; border: 5px solid rgb(255, 114, 112);">
                 </video>
               </div>
               <div class="column" style="text-align: center;">
-                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Wave Grass Terrain</h3>
+                <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Grass</h3>
                 <video autoplay muted loop playsinline controls preload="auto"
-                      src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
+                      src="./static/videos/grass-recover.mov"
                       width="70%"
                       style="border-radius:10px; border: 5px solid rgb(134, 236, 137);">
                 </video>
@@ -397,50 +387,16 @@
 
 
         <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          2) We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;"> baselines</strong> that uses <em>given trajectory (i.e., Unitree G1 Controller) and pure RL (i.e., HosT)</em> on indoor and outdoor environments. 
-          Note: We use the office code released by HosT. we only compare G1 controller for outdoor experiments due to the consideration of robot's safeness. 
+          2) We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with a <strong style="color: #e63946; font-weight: 800;"> baseline</strong> that uses <em>given trajectory (i.e., Unitree G1 Controller) on outdoor environments. 
+          
         </p>  
-            <!-- Row 1 -->
-          <div class="columns is-vcentered">
-            <!-- Video 1 -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                Unitree G1 Controller
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/g1_door_opening_baseline_unmask.mp4"
-                     style="width: 70%; border-radius:10px; border: 5px solid rgb(255, 114, 112);">
-              </video>
-            </div>
-
-            <!-- Video 2 -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                HoST
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/g1_door_opening_FIRM_unmask.mp4"
-                     style="width: 70%; border-radius:10px; border: 5px solid rgb(134, 236, 137);">
-              </video>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                FIRM (Ours)
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/g1_door_opening_rocky_unmask.mp4"
-                     style="width: 70%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
-              </video>
-            </div>
-          </div>
+    
 
           <!-- Row 2 -->
           <div class="columns is-vcentered">
             <!-- Video 4 -->
             <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+              <h3 class="title is-2" style="margin-bottom: 10px; font-size: x-large;">
                 Unitree G1 Controller
               </h3>
               <video autoplay muted loop playsinline controls preload="auto"
@@ -449,20 +405,11 @@
               </video>
             </div>
 
-            <!-- Video 5 -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                HoST
-              </h3>
-              <img autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/na.png"
-                     style="width: 70%; border-radius:10px; border: 5px solid rgb(134, 236, 137);">
-              </img>
-            </div>
+         
 
             <!-- Video 6 -->
             <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
+              <h3 class="title is-2" style="margin-bottom: 10px; font-size: x-large;">
                 FIRM (Ours)
               </h3>
               <video autoplay muted loop playsinline controls preload="auto"
@@ -473,57 +420,9 @@
           </div>
 
             <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          3) We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with <strong style="color: #e63946; font-weight: 800;"> FIRM wo Online Adapter</strong> to better evaluate context-awareness.
-        </p>  
-          <!-- Row 1 -->
-          <div class="columns is-vcentered">
-            <!-- Left: FIRM w/o Online Adapter -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                FIRM w/o Online Adapter
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/firm_wo_adapter_task1.mp4"
-                     style="width: 80%; border-radius:10px; border: 5px solid rgb(255, 180, 112);">
-              </video>
-            </div>
 
-            <!-- Right: FIRM (Ours) -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                FIRM (Ours)
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/firm_with_adapter_task1.mp4"
-                     style="width: 80%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
-              </video>
-            </div>
-          </div>
 
-          <!-- Row 2 -->
-          <div class="columns is-vcentered">
-            <!-- Left: FIRM w/o Online Adapter -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                FIRM w/o Online Adapter
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/firm_wo_adapter_task2.mp4"
-                     style="width: 80%; border-radius:10px; border: 5px solid rgb(255, 180, 112);">
-              </video>
-            </div>
 
-            <!-- Right: FIRM (Ours) -->
-            <div class="column has-text-centered">
-              <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">
-                FIRM (Ours)
-              </h3>
-              <video autoplay muted loop playsinline controls preload="auto"
-                     src="./static/videos/firm_with_adapter_task2.mp4"
-                     style="width: 80%; border-radius:10px; border: 5px solid rgb(112, 175, 255);">
-              </video>
-            </div>
-          </div>
 
 
 
