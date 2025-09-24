@@ -129,13 +129,9 @@
       </h1>
       <!--  <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
         <b>Spotlight</b> WCBM Workshop CoRL 2024
-      </h1>
-      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
-        X-Embodiment Workshop CoRL 2024
       </h1> -->
       <div class="column has-text-centered is-hidden-tablet">
         <div class="publication-links">
-          <!-- PDF Link. -->
           <span class="link-block">
             <a href="./static/FIRM.pdf" class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
@@ -152,7 +148,6 @@
               <span>arXiv (Coming Soon)</span>
             </a>
           </span>
-          <!-- Video Link. -->
           <span class="link-block">
             <a href="https://firm2025.github.io" class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
@@ -161,7 +156,6 @@
               <span>Video</span>
             </a>
           </span>
-          <!-- Code Link. -->
           <span class="link-block">
             <a href="https://github.com/LeCAR-Lab/FIRM/"
               class="external-link button is-normal is-rounded is-dark">
@@ -182,27 +176,10 @@
         </div>
       </div>
     </div>
-
   </div>
-
-  <!-- Hero footer: will stick at the bottom -->
-  <!-- <div class="hero-foot is-hidden-mobile">
-    <nav class="tabs is-boxed is-fullwidth is-size-4">
-      <ul>
-        <li><a href="#agile-skills">Agile Whole-Body Skills</a></li>
-        <li><a href="#before-after-asap"></a>Before/After ASAP Fine-tuning</a></li>
-        <li><a href="#abstract">Abstract</a></li>
-        <li><a href="#method">Method</a></li>
-      </ul>
-    </nav>
-  </div> -->
 </section>
 
-
-
-
-
-
+  
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
@@ -210,35 +187,32 @@
         <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
           <em>Autonomous</em> Fall Damage Mitigation and Recovery Tasks
         </h2>      
-   <!--      <tr>
-          <td> --><p class="content is-medium" style="text-align: center; padding-bottom: 20px;">1) We evaluate <strong style="color: #13c253; font-weight: 800;">FIRM</strong> under different types of terrains: <strong style="color: darkgreen; font-weight: 800;">Grass, Red-Soil Slope, Form, and Irregular debris</strong>. <strong style="color: #13c253; font-weight: 800;">FIRM</strong>  is also robust under perturbation with deformable payload. </p>
-          
-
-            <div class="columns"> <!-- Correct Bulma structure -->
+          <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">1) We evaluate <strong style="color: #13c253; font-weight: 800;">FIRM</strong> under different types of terrains: <strong style="color: darkgreen; font-weight: 800;">Grass, Red-Soil Slope, Form, and Irregular debris</strong>. <strong style="color: #13c253; font-weight: 800;">FIRM</strong>  is also robust under perturbation with deformable payload. </p>
+            <div class="columns">
               <div class="column has-text-centered">
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/12-outdoor-uneven.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" 
+                       src="./static/videos/12-outdoor-uneven.mov" 
+                       width="80%" style="border-radius:10px;">
+                 </video>
               </div>
-
             </div>
-
-            <div class="columns is-centered"> <!-- Bulma columns container -->
-                <div class="column has-text-centered">
-                  <video autoplay muted loop playsinline controls preload="auto" 
-                         src="./static/videos/12-indoor-uneven.mov" 
-                         width="100%" style="border-radius:10px;">
-                  </video>
-                </div>
-
-                <div class="column has-text-centered">
-                  <video autoplay muted loop playsinline controls preload="auto" 
-                         src="./static/videos/12-indoor-payload.mov" 
-                         width="100%" style="border-radius:10px;">
-                  </video>
-                </div>
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <video autoplay muted loop playsinline controls preload="auto" 
+                       src="./static/videos/12-indoor-uneven.mov" 
+                       width="80%" style="border-radius:10px;">
+                </video>
               </div>
-                <p> 
-              <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">2) We compare the performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with <strong style="color: #e63946; font-weight: 800;"> FIRM wo Online Adapter</strong> to better evaluate context-awareness.
-        </p>  
+              <div class="column has-text-centered">
+                <video autoplay muted loop playsinline controls preload="auto" 
+                       src="./static/videos/12-indoor-payload.mov" 
+                       width="80%" style="border-radius:10px;">
+                </video>
+              </div>
+            </div>
+        
+            <p> 
+            <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">2) We compare the performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with <strong style="color: #e63946; font-weight: 800;"> FIRM wo Online Adapter</strong> to better evaluate context-awareness. </p>  
           <!-- Row 1 -->
           <div class="columns is-vcentered">
             <!-- Left: FIRM w/o Online Adapter -->
@@ -263,10 +237,6 @@
               </video>
             </div>
           </div>
-        <!--     <br> -->
-
-   <!--        </td>
-        </tr> -->
       </div> 
     </div>
   </div>
@@ -281,43 +251,34 @@
         </h2>
         <tr>
           <td>
-
             <!-- <div class="columns">
               <div class="column has-text-centered">
                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Door-Opening</h3>
                 <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/door_opening_fieldai_unmask.mp4" width="100%" style="border-radius:10px;"></video>
               </div>
             </div> -->      
-
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Sudden Outage (0.2s Zero-Torque)</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-prev-1.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-prev-1.mov" width="80%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
                  <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Adding Deformable Payload & Hitting with Ball</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-pb.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/real-pb.mov" width="80%" style="border-radius:10px;"></video>
               </div>
             </div>
             <br>
-
-
-     
-
-
             <div class="columns"> <!-- Correct Bulma structure -->
               <div class="column">
                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Pushing towards the Slope</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/slope.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/slope.mov" width="80%" style="border-radius:10px;"></video>
               </div>
               <div class="column">
                 <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Pushing towards the Wall</h3>
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/wall.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/wall.mov" width="80%" style="border-radius:10px;"></video>
               </div>
             </div>
             <br>
-
-
           </td>
         </tr>
       </div> 
@@ -333,19 +294,14 @@
         <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
           Fall Damage Mitigation Task
         </h2>
-       
-
-
         <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
           We compare the quantitative performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with two <strong style="color: #e63946; font-weight: 800;">baselines</strong> that uses <em>passive control when fall happens (i.e., Freezing Mode) and pure tracking (i.e., sparse key-frame tracking)</em>, on the simulator.
         </p> 
               <div class="column">
               <!--   <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"></h3> -->
-                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/sim-mitigation.mov" width="100%" style="border-radius:10px;"></video>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/sim-mitigation.mov" width="80%" style="border-radius:10px;"></video>
               </div> 
-              
             </div>
-
           </td>
         </tr>
       </div> 
@@ -366,13 +322,12 @@
         </p>        
         <tr>
           <td>
-      
             <div class="columns">
               <div class="column" style="text-align: center;">
                 <h3 class="title is-3" style="margin-bottom: 10px; font-size: x-large;">Flat Mat</h3>
                 <video autoplay muted loop playsinline controls preload="auto"
                       src="./static/videos/flat.mov"
-                      width="70%"
+                      width="80%"
                       style="border-radius:10px;">
                 </video>
               </div>
@@ -386,51 +341,30 @@
               </div>
             </div>
             <br>
-
-
-
+            
         <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-          2) We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with a <strong style="color: #e63946; font-weight: 800;"> baseline</strong> that uses given trajectory (i.e., Unitree G1 Controller) on outdoor environments. 
-          
-        </p>  
-    
-
-          <!-- Row 2 -->
+          2) We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FIRM</strong> with a <strong style="color: #e63946; font-weight: 800;"> baseline</strong> that uses given trajectory (i.e., Unitree G1 Controller) on outdoor environments. </p>  
           <div class="columns is-vcentered">
-            <!-- Video 4 -->
             <div class="column has-text-centered">
               <h3 class="title is-2" style="margin-bottom: 10px; font-size: x-large;">
                 Unitree G1 Controller
               </h3>
               <video autoplay muted loop playsinline controls preload="auto"
                      src="./static/videos/g1-wave-1.mov"
-                     style="width: 70%; border-radius:10px;">
+                     style="width: 80%; border-radius:10px;">
               </video>
             </div>
-
-         
-
-            <!-- Video 6 -->
             <div class="column has-text-centered">
               <h3 class="title is-2" style="margin-bottom: 10px; font-size: x-large;">
                 FIRM (Ours)
               </h3>
               <video autoplay muted loop playsinline controls preload="auto"
                      src="./static/videos/ours-wave-1.mov"
-                     style="width: 70%; border-radius:10px;">
+                     style="width: 80%; border-radius:10px;">
               </video>
             </div>
           </div>
-
             <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
-
-
-
-
-
-
-
-
           </td>
         </tr>
       </div> 
@@ -441,22 +375,14 @@
 
 <section class="section">
   <div class="container">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-two-thirds">
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-
-        Falling is an inherent risk of humanoid mobility. Maintaining stability is thus a primary safety focus in robot control and learning, yet no existing approach fully averts loss of balance.When instability does occur, prior work addresses only isolated aspects of falling: avoiding falls, choreographing a controlled descent, or standing up afterward.  Consequently, humanoid robots lack integrated strategies for impact mitigation and prompt recovery when real falls defy these scripts.
-        <p>
-
-        <span class="method" style="color: darkred;">We aim to go beyond keeping balance to make the entire fall-and-recovery process safe and autonomous</span> : prevent falls when possible, reduce impact when unavoidable, and stand up when fallen. By fusing sparse human demonstrations with reinforcement learning and an adaptive diffusion-based memory of safe reactions, we learn whole-body behaviors that unify fall prevention, impact mitigation, and rapid recovery in one policy.
-
-        <p>
-
-        Experiments in simulation and on a Unitree G1 demonstrate robust sim-to-real transfer, lower impact forces, and consistently fast recovery across diverse disturbances, pointing toward safer, more resilient humanoids in real environments.
-
+          <p> Falling is an inherent risk of humanoid mobility. Maintaining stability is thus a primary safety focus in robot control and learning, yet no existing approach fully averts loss of balance.When instability does occur, prior work addresses only isolated aspects of falling: avoiding falls, choreographing a controlled descent, or standing up afterward.  Consequently, humanoid robots lack integrated strategies for impact mitigation and prompt recovery when real falls defy these scripts.
+          </p>
+          <span class="method" style="color: darkred;">We aim to go beyond keeping balance to make the entire fall-and-recovery process safe and autonomous</span> : prevent falls when possible, reduce impact when unavoidable, and stand up when fallen. By fusing sparse human demonstrations with reinforcement learning and an adaptive diffusion-based memory of safe reactions, we learn whole-body behaviors that unify fall prevention, impact mitigation, and rapid recovery in one policy.
+          <p> Experiments in simulation and on a Unitree G1 demonstrate robust sim-to-real transfer, lower impact forces, and consistently fast recovery across diverse disturbances, pointing toward safer, more resilient humanoids in real environments.
           </p>
         </div>
       </div>
@@ -481,7 +407,6 @@
         </div>
       </div>
     </div>
-    <!-- <h2 class="title is-4" style="text-align: center;">Training Framework</h2> -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-thirds">
         <div class="content has-text-justified">
@@ -494,19 +419,13 @@
         </div>
       </div>
     </div>
-    
     <div class="columns is-centered">
       <div class="column is-four-fifth has-text-centered">
-        <img src="./static/images/firm-overview.png" alt="" style="width: 67%;" />
+        <img src="./static/images/firm-overview.png" alt="" style="width: 80%;" />
       </div>
-
     </div>
 
-
-
-
-
-
+    
 <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Adaptive safe control - lightweight online adapter</h2>
@@ -522,7 +441,6 @@
         </div>
       </div>
     </div>
-    <!-- <h2 class="title is-4" style="text-align: center;">Training Framework</h2> -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-three-thirds">
         <div class="content has-text-justified">
@@ -535,36 +453,32 @@
         </div>
       </div>
     </div>
-    
     <div class="columns is-centered">
       <div class="column is-four-fifth has-text-centered">
-        <img src="./static/images/adapt.png" alt="" style="width: 50%;" />
+        <img src="./static/images/adapt.png" alt="" style="width: 80%;" />
       </div>
-      
     </div>
+  </section>
+    
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="titile">BibTeX</h2>
+      <pre><code>@article{anonymous2025firm,
+        title={FIRM},
+        author={anonymous},
+        journal={},
+        year={2025}
+      }</code></pre>
+    </div>
+  </section>
 
-
-    <section class="section" id="BibTeX">
-      <div class="container content">
-        <h2 class="titile">BibTeX</h2>
-        <pre><code>@article{anonymous2025firm,
-          title={FIRM},
-          author={anonymous},
-          journal={},
-          year={2025}
-        }</code></pre>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://umi-on-legs.github.io"><span class="dnerf">UMI-On-Legs</span></a>.</p>
       </div>
-    </section>
-
-
-
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-          <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://umi-on-legs.github.io"><span class="dnerf">UMI-On-Legs</span></a>.</p>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
 </body>
 
